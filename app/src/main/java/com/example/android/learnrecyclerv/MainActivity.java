@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private List<ListItem> listItems;
-    private static final String URL_DATA="https://api.myjson.com/bins/17hnxz";
+    private static final String URL_DATA="https://api.myjson.com/bins/f3adz";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +60,8 @@ public class MainActivity extends AppCompatActivity {
                         JSONObject o=array.getJSONObject(i);
                         ListItem li=new ListItem(
                                 o.getString("title"),
-                                o.getString("desc")
+                                o.getString("desc"),
+                                o.getString("img")
                         );
                         listItems.add(li);
                     }
